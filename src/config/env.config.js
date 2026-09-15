@@ -17,5 +17,10 @@ export function validateEnv() {
     );
   }
 
+  const port = Number(process.env.PORT);
+  if (!Number.isInteger(port) || port <= 0) {
+    throw new Error("La variable PORT debe ser un número entero válido mayor que 0.");
+  }
+
   return { ...process.env };
 }
