@@ -13,12 +13,14 @@ class ServiceManager {
     return this.services.find((service) => service.id === id);
   }
 
-  createService(name, description, price, available) {
+  addService(name, description,duration,  price, category, available) {
     const newService = {
       id: crypto.randomUUID(),
       name,
       description,
+      duration,
       price,
+      category,
       available,
     };
 
@@ -33,7 +35,9 @@ class ServiceManager {
     }
     service.name = updatedData.name ?? service.name;
     service.description = updatedData.description ?? service.description;
+    service.duration = updatedData.duration ?? service.duration;
     service.price = updatedData.price ?? service.price;
+    service.category = updatedData.category ?? service.category;
     service.available = updatedData.available ?? service.available;
     return service;
   }

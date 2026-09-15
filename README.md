@@ -61,7 +61,9 @@ El recurso `services` representa la colección de servicios disponibles en la ap
   id: "uuid",
   name: "Nombre del servicio",
   description: "Descripción detallada",
+  duration:"Duración del servicio",
   price: 2500,
+  category: "Categoría del servicio",
   available: true
 }
 ```
@@ -70,7 +72,9 @@ El recurso `services` representa la colección de servicios disponibles en la ap
 - `id`: identificador único generado con `crypto.randomUUID()`.
 - `name`: nombre del servicio.
 - `description`: detalle del servicio.
+- `duration`: duración del servicio.
 - `price`: valor del servicio.
+- `category`: categoría del servicio.
 - `available`: indica si el servicio está disponible o no.
 
 La colección se guarda en memoria dentro de la instancia de `ServiceManager`.
